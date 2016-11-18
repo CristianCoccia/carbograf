@@ -50,7 +50,7 @@ var app = {
 };
 
 //Funciones de diseño para la app
-$( "#mypanel" ).panel( "open" );
+
 
 $("document").ready(function(){
      $( "#mypanel" ).panel( "open" );
@@ -71,6 +71,13 @@ $("body").on("swiperight",function(){
 });
 
 $(window).load(function(){
-    $('#contenedor-productos').masonry();
+	$('#contenedor-productos').masonry();
+    
+   
 });
 
+$("document").ready(function(){
+
+ $( "#mypanel" ).panel( "open" );
+
+});
