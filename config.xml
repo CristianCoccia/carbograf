@@ -1,3 +1,4 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.sistemasje.carbograf" version="1.0.0">
   <name>Carbograf C.A</name>
   <description>Venta de productos de carbón y gráfito para Carbograf C.A</description>
   <author href="http://sistemasje.com" email="distritohosting@gmail.com">Sistemas JE C.A</author>
@@ -78,7 +79,6 @@
     <icon src="www/res/icon/windows/Wide310x150Logo.scale-240.png" platform="windows" width="744" height="360"/>
     <splash src="www/res/screen/windows/SplashScreenPhone.scale-240.png" platform="windows" width="1152" height="1920"/>
   </platform>
-  <plugin name="cordova-plugin-camera" source="npm"  />
     <access origin="*"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
