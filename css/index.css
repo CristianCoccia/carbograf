@@ -122,7 +122,10 @@ h1 {
 
 
 /* Edición Cristian Coccia */
-
+a
+{
+    color: #666666;
+}
 
 ul li
 {
@@ -140,7 +143,6 @@ ul
 }
 
 
-
 .caja-producto
 {
     background: white;
@@ -150,6 +152,27 @@ ul
    
     
 }
+.direccion
+{
+    font-weight: bold;
+    text-align: center;
+}
+.logop
+{   
+    margin-top: 2em;
+    width: 70%;
+    height: auto;
+}
+
+.divider
+{
+        color: red;
+    font-weight: bolder;
+    text-align: center;
+    border-bottom: 0.2em inset gray ;
+    
+}
+
 
 .desc-producto
 {
@@ -171,7 +194,7 @@ ul
 
 .menu
 {
-    width: 20%;
+   display: inline;
 }
 
 .opciones
@@ -204,7 +227,7 @@ ul
     display: block;
     color: red;
     text-align: right;
-    font-size: 2em;
+    font-size: 3em;
     text-transform: capitalize;
     margin-top: -2em;
     padding-left: 2em;
@@ -230,10 +253,34 @@ ul
     margin: 0;
 }
 
-#contenedor-productos>div
+#cotizacion
+{   
+    margin-top: 1em;
+    width: 100%;
+    border-top: 0.5em inset gray ;
+
+}
+
+
+#cotizacion h3
+{
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+    border-bottom: 0.5em outset gray ;
+}
+
+#cotizacion h5
+{
+    padding: 0.8em;
+    font-weight: bolder;
+
+}
+
+#contenedor-productos   
 {   
 
-   
+   min-height: 100em;
 }
 
 #contenedor-productos img
@@ -259,9 +306,17 @@ ul
     padding: 10px;
 }
 
-#logop
+
+#img-single
 {
-    width: 70%;
+    max-width: 80%;
+    height: auto;
+    text-align: center;
+}
+
+#img-grafito
+{
+    max-width: 80%;
     height: auto;
 }
 
@@ -269,11 +324,12 @@ ul
 {
     max-width: 100%;
     height: auto;
-    
+    position: absolute;
+    bottom: 0;
     
 }
 
-#mensaje
+#cmensaje
 {
     height: 20em !important;
 }
