@@ -9,7 +9,6 @@
   <preference name="orientation" value="portrait"/>
   <plugin name="cordova-plugin-camera" source="npm"  />
   <icon src="icon.png"/>
-  <uses-permission android:name="android.permission.INTERNET" />
   <platform name="android">
     <icon src="www/res/icon/android/drawable-ldpi-icon.png" density="ldpi"/>
     <icon src="www/res/icon/android/drawable-mdpi-icon.png" density="mdpi"/>
