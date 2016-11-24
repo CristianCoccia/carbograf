@@ -34,6 +34,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        pictureSource=navigator.camera.PictureSourceType; 
+        destinationType=navigator.camera.DestinationType; 
          
     },
     // Update DOM on a Received Event
@@ -81,3 +83,57 @@ $("document").ready(function(){
  $( "#mypanel" ).panel( "open" );
 
 });
+
+
+$("#enviar").click(function(){
+    
+    var cemail= $("#ccorreo").val();
+    var cauthor= $("#crazon").val();
+    var csubject= $("#casunto").val();
+    var ccontent= $("#cmensaje").val();
+
+    $.ajax({
+        type: "GET",
+        url: "http://server05.distritohosting.com/carbograf/enviocorreo.php",
+        data:{email:cemail,
+              subject:csubject,
+              author:cauthor,
+              content:ccontent  
+        },
+        dataType:"json",
+        crossDomain: true,
+        beforeSend: function () {
+                
+
+                },
+
+         success:function(){    
+
+            alert("Su mensaje fue enviado correctamente.");
+        },error:function()
+        {
+            alert("Ocurrio un error, verifique su conexión antes de continuar.")
+        }
+        });
+return false;
+});
+
+
+
+$("body").on("pagebeforeshow","#home",function(){ // When entering pagetwo
+ 
+$('#contenedor-productos').masonry('reloadItems');
+$('#contenedor-productos').masonry('reload');
+
+
+  
+});
+
+
+
+
+$("body").on("pagecontainerload","#home",function(){ // When entering pagetwo 
+  $('#contenedor-productos').masonry();
+});
+    
+$("document").ready(llenar_home());

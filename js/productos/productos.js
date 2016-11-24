@@ -2,7 +2,7 @@ var productos = [
 
 
 {
-
+	id:1,
 	nombre:"LAS PALETAS Y/O ASPAS DE CARBÓN/GRAFITO",
 	imagen:"img/productos/paletas.png",
 	descripcioncorta:"Las aspas o paletas son fabricadas con grafitos polimerizados e impregnados con resinas especiales.",
@@ -10,27 +10,29 @@ var productos = [
 }
 ,
 {
-
+	id:2,
 	nombre:"Escobillas industriales",
 	imagen:"img/productos/escobillas.png",
 	descripcioncorta:"CARBO & GRAF, C.A. fabrica escobillas de carbón de la máxima calidad, utilizamos una amplia gama de calidades y/o grados ORIGINALES lo cual.",
 	descripcion:"CARBO & GRAF, C.A. fabrica escobillas de carbón de la máxima calidad, utilizamos una amplia gama de calidades y/o grados ORIGINALES lo cual permite que nuestras escobillas de carbón tengan un rendimiento óptimo adaptándose a las necesidades de cada motor."
 },
-{
+{	
+	id:3,
 	nombre:"barras de teflón",
 	imagen:"img/productos/teflon.png",
 	descripcioncorta:"Barras de Teflón PTFE 100% virgen, son uno de los polímeros más versátiles, utilizado en una gran cantidad de aplicaciones.",
 	descripcion:""
 },
 
-{
+{	
+	id:4,
 	nombre:"barras de teflón",
 	imagen:"img/productos/teflon.png",
 	descripcioncorta:"Barras de Teflón PTFE 100% virgen, son uno de los polímeros más versátiles, utilizado en una gran cantidad de aplicaciones.",
 	descripcion:""
 },
 {
-
+	id:5,
 	nombre:"Escobillas industriales",
 	imagen:"img/productos/escobillas.png",
 	descripcioncorta:"CARBO & GRAF, C.A. fabrica escobillas de carbón de la máxima calidad, utilizamos una amplia gama de calidades y/o grados ORIGINALES lo cual.",

@@ -44,6 +44,7 @@
     <script type="text/javascript" src="js/contenido.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/imagen.js"></script>
     <link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css" />	
@@ -63,13 +64,11 @@
 	  <img src="img/logo/mascota.png" id="mascota">
 </div>
    
-
-<div data-role="page" id="home">
-
 <!--Contenido Principal página de inicio-->	
+<div data-role="page" id="home">
 	<div data-role="header" class="pg-header"> 
-	<img src="img/logo/logo.png" id="logop">	
-	<a href="#mypanel" class="menu" data-position="right">MENU</a>
+	<img src="img/logo/logo.png" class="logop">	
+	<a href="#mypanel" class="menu" data-role="button" data-mini="true"><img src="img/iconos/menu.png"></a>
 	<p class="title">Productos<p>
 	</div>
 	<div role="main" class="ui-content">
@@ -80,37 +79,114 @@
 	<div data-role="footer"></div>
 </div>
 
-
+<!--Página de contacto-->
 <div data-role="page" id="contacto">
-
-<!--Contenido Principal página de inicio-->	
-	<div data-role="header"> 
-	<img src="img/logo/logo.png" id="logop">	
-	<a href="#mypanel" class="menu" data-position="right">MENU</a>
+	<div data-role="header" class="pg-header"> 
+	<img src="img/logo/logo.png" class="logop">	
+	<a href="#mypanel" class="menu" data-position="right"><img src="img/iconos/menu.png"></a>
 	<p class="title">contacto<p>
 	</div>
 	<div role="main" class="ui-content">
-		<form method="post" action="demoform.asp">
+		<form method="post">
 		 <div class="ui-field-contain">
-		    <label for="razon">Razón Social o Nombre:</label>
-		    <input type="text" name="razon" id="razon">
+		    <label for="crazon">Razón Social o Nombre:</label>
+		    <input type="text" name="razon" id="crazon">
 
-		    <label for="correo">Correo:</label>
-		    <input type="email" name="correo" id="correo" placeholder="Tú correo:">
+		    <label for="ccorreo">Correo:</label>
+		    <input type="email" name="correo" id="ccorreo">
 
-		    <label for="asunto">Asunto:</label>
-		    <input type="text" name="asunto" id="asunto"/>
+		    <label for="casunto">Asunto:</label>
+		    <input type="text" name="asunto" id="casunto"/>
 
-		    <label for="Mensaje">Mensaje:</label>
-		    <textarea name="mensaje" id="mensaje" row="20"></textarea>
+		    <label for="cmensaje">Mensaje:</label>
+		    <textarea name="mensaje" id="cmensaje" row="20"></textarea>
 
-		    <input type="submit" name="enviar" value="ENVIAR">
+		    <input type="button" name="enviar" value="ENVIAR" id="enviar">
 		  </div>
 		</form>
+
+		<h2 class="divider">ÚBICANOS</h2>
+		<p class="direccion">Av. Eugenio Mendoza prolongación Av. Michelena, C. C. Atlas, Módulo “A” Local A-6 Valencia Edo. Carabobo.
+		Punto de Referencia: IPASME Valencia.</p>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.069904206636!2d-67.97582148520443!3d10.1749734927313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x130cf1d8af6a12ea!2sSuministros+Atlas+C.A!5e0!3m2!1ses!2s!4v1480002156559" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 	</div>
 	<div data-role="footer"></div>
 </div>
 
+<!--Página del detalle del producto -->
+<div data-role="page" id="detalle-producto">
+	<div data-role="header" class="pg-header"> 
+		<img src="img/logo/logo.png" class="logop">	
+		<a href="#mypanel" class="menu" data-position="right"><img src="img/iconos/menu.png"></a>
+		<p class="title" id="titulo-producto-single"><p>
+	</div>
+		<div role="main" class="ui-content">
+			<div class="col-xs-12">
+				<img id="img-single" src="">
+			</div>
+			<div class="col-xs-12">
+				<h3>Descripción del producto:</h3>
+				<div id="descripcion-detalle"></div>
+			</div>	
+			<div class="clearfix"></div>
+				<form id="cotizacion">
+					<h3>COTIZACIÓN:</h3>
+					<h5 data-role="list-divider">Datos de contacto:</h5>
+					<label for="trazon">Razón Social o Nombre:</label>
+		   			<input type="text" name="trazon" id="trazon">
+		   			<label for="tpersona">Persona Contacto:</label>
+		   			<input type="text" name="tpersona" id="tpersona">
+		   			<label for="temail">Email:</label>
+		   			<input type="email" name="temail" id="temail">
+		   			<label for="tnumero">Número télefonico:</label>
+		   			<input type="text" name="tnumero" id="tnumero">
+		   			<label for="tdepartamento">Departamento:</label>
+		   			<input type="text" name="tdepartamento" id="tdepartamento">
+		   			<h5>CARÁCTERISTICAS DE LA PIEZA DE GRÁFITO:</h5>
+		   			<label for="tvoltaje">Voltaje:</label>
+		   			<input type="text" name="tvoltaje" id="tvoltaje">
+		   			<label for="tamperaje">Amperaje:</label>
+		   			<input type="text" name="tamperaje" id="tamperaje">
+		   			<label for="trpm">R.P.M:</label>
+		   			<input type="text" name="trpm" id="trpm">
+		  			<label for="tpieza">Número de pieza del motor:</label>
+		   			<input type="text" name="tpieza" id="tpieza">
+		   			<label for="tdiametroi">Diámetro interno:</label>
+		   			<input type="number" name="tdiametroi" id="tdiametroi">
+		   			<label for="tdiametroe">Diámetro externo:</label>
+		   			<input type="number" name="tdiametroe" id="tdiametroe">
+		   			<label for="tlongitud">Longitud:</label>
+		   			<input type="number" name="tlongitud" id="tlongitud">
+		   			<label for="tcalidad">Calidad (de tenerla):</label>
+		   			<input type="text" name="tcalidad" id="tcalidad">	
+		   			<label for="tlargo">Largo del cable:</label>
+		   			<input type="number" name="tlargo" id="tlargo">
+		   			<label for="tsalida">Salida del cable:</label>
+		   			<input type="number" name="tsalida" id="tsalida">
+		   			<label for="tdiametrocable">Diámetro del cable:</label>
+		   			<input type="number" name="tdiametrocable" id="tdiametrocable">
+		   			<label for="tncable">Número de cables:</label>
+		   			<input type="number" name="tncable" id="tncable">
+		   			<label for="tterminal">Tipo de términal:</label>
+		   			<input type="text" name="tterminal" id="tterminal">
+		   			<label for="tubicacion">Ubicación y servicio:</label>
+		   			<input type="text" name="tubicacion" id="tubicacion">
+		   			<label for="tfrecuencia">Frecuencia de uso:</label>
+		   			<input type="text" name="tfrecuencia" id="tfrecuencia">
+		   			<label for="tcondiciones">Condiciones ámbientales:</label>
+		   			<input type="text" name="tcondiciones" id="tcondiciones">
+		   			<label for="tobservaciones">Observaciones:</label>
+		   			<textarea id="tobservaciones" name="tobservaciones"></textarea>
+		   			<h5>Dibujo del gráfito:</h5>
+		   			<img id="img-grafito" src="img/iconos/agregar.png"> 			
+					<input type="button" name="foto" onClick="obtenerfoto();" value="Tomar foto del gráfito.">
+					<input type="button" name="foto" onClick="" value="Enviar cotización.">
+			
+			</div>
+		</div>
+		<div data-role="footer"></div>
+</div>
 
 
 
