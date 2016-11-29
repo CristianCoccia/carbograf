@@ -37,15 +37,17 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+     <script type="text/javascript" src="js/jquery.ui.map.js"></script>
     <script type="text/javascript" src="js/productos/productos.js"></script>
     <script type="text/javascript" src="js/contenido.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="js/imagen.js"></script>
     <link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/b.min.css" />
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css" />	
     <title>Carbograf</title>
@@ -57,8 +59,8 @@
 	  <ul>
 	  	<li id="logo"><img src="img/logo/logo.png"></li>
 	   	<li class="opciones"><a href="#home"><img src="img/iconos/mini1.png"><p>Cotizar/Productos</p></a></li>
-	   	<li class="opciones"><img src="img/iconos/mini2.png"><p>La compañia</p></li>
-	   	<li class="opciones"><img src="img/iconos/mini3.png"><p>Ubicanos</p></li>
+	   	<li class="opciones"><a href="#empresa"><img src="img/iconos/mini2.png"><p>La compañia</p></a></li>
+	   	<li class="opciones"><a href="#ubicanos"><img src="img/iconos/mini3.png"><p>Ubicanos</p></a></li>
 	   	<li class="opciones"><a href="#contacto"><img src="img/iconos/mini4.png"><p>Contactanos</p></a></li>
 	  </ul>
 	  <img src="img/logo/mascota.png" id="mascota">
@@ -68,7 +70,7 @@
 <div data-role="page" id="home">
 	<div data-role="header" class="pg-header"> 
 	<img src="img/logo/logo.png" class="logop">	
-	<a href="#mypanel" class="menu" data-role="button" data-mini="true"><img src="img/iconos/menu.png"></a>
+	<a href="#mypanel" class=" ui-btn-right menu" data-role="button" data-mini="true"><img src="img/iconos/menu.png"></a>
 	<p class="title">Productos<p>
 	</div>
 	<div role="main" class="ui-content">
@@ -83,32 +85,28 @@
 <div data-role="page" id="contacto">
 	<div data-role="header" class="pg-header"> 
 	<img src="img/logo/logo.png" class="logop">	
-	<a href="#mypanel" class="menu" data-position="right"><img src="img/iconos/menu.png"></a>
+	<a href="#mypanel" class="menu ui-btn-right" data-position="right"><img src="img/iconos/menu.png"></a>
 	<p class="title">contacto<p>
 	</div>
-	<div role="main" class="ui-content">
-		<form method="post">
+	<div role="contact-page" class="ui-content">
+		<form method="post" id="form-contacto">
 		 <div class="ui-field-contain">
 		    <label for="crazon">Razón Social o Nombre:</label>
-		    <input type="text" name="razon" id="crazon">
+		    <input type="text" name="razon" id="crazon" required/>
 
 		    <label for="ccorreo">Correo:</label>
-		    <input type="email" name="correo" id="ccorreo">
+		    <input type="email" name="correo" id="ccorreo" required/>
 
 		    <label for="casunto">Asunto:</label>
-		    <input type="text" name="asunto" id="casunto"/>
+		    <input type="text" name="asunto" id="casunto" required/>
 
 		    <label for="cmensaje">Mensaje:</label>
-		    <textarea name="mensaje" id="cmensaje" row="20"></textarea>
+		    <textarea name="mensaje" id="cmensaje" row="20" required ></textarea>
 
 		    <input type="button" name="enviar" value="ENVIAR" id="enviar">
 		  </div>
 		</form>
 
-		<h2 class="divider">ÚBICANOS</h2>
-		<p class="direccion">Av. Eugenio Mendoza prolongación Av. Michelena, C. C. Atlas, Módulo “A” Local A-6 Valencia Edo. Carabobo.
-		Punto de Referencia: IPASME Valencia.</p>
-		<img src="img/mapa/mapa.png" style="max-width:100%;">
 
 	</div>
 	<div data-role="footer"></div>
@@ -118,10 +116,10 @@
 <div data-role="page" id="detalle-producto">
 	<div data-role="header" class="pg-header"> 
 		<img src="img/logo/logo.png" class="logop">	
-		<a href="#mypanel" class="menu" data-position="right"><img src="img/iconos/menu.png"></a>
+		<a href="#mypanel" class="menu ui-btn-right" data-position="right"><img src="img/iconos/menu.png"></a>
 		<p class="title" id="titulo-producto-single"><p>
 	</div>
-		<div role="main" class="ui-content">
+		<div role="single-page" class="ui-content">
 			<div class="col-xs-12">
 				<img id="img-single" src="">
 			</div>
@@ -180,8 +178,8 @@
 		   			<textarea id="tobservaciones" name="tobservaciones"></textarea>
 		   			<h5>Dibujo del gráfito:</h5>
 		   			<img id="img-grafito" src="img/iconos/agregar.png"> 			
-					<input type="button" name="foto" onClick="obtenerfoto();" value="Tomar foto del gráfito.">
-					<input type="button" name="foto" onClick="" value="Enviar cotización.">
+					<input type="button" class="btn" name="foto" onClick="obtenerfoto();" value="Tomar foto del gráfito.">
+					<input type="button" class="btn" name="foto" onClick="" value="Enviar cotización.">
 			
 			</div>
 		</div>
@@ -190,7 +188,41 @@
 
 
 
+<!--Contenido Principal página de ubicanos-->	
+<div data-role="page" id="ubicanos">
+	<div data-role="header" class="pg-header"> 
+	<img src="img/logo/logo.png" class="logop">	
+	<a href="#mypanel" class=" ui-btn-right menu" data-role="button" data-mini="true"><img src="img/iconos/menu.png"></a>
+	<p class="title">Ubicanos<p>
+	</div>
+	<div role="ubicanos-page" class="ui-content">
+	<div id="cmap">
+		<div id="map">
 
+		</div>
+	</div>
+	</div>
+	<div data-role="footer"></div>
+</div>
+
+<!--Contenido Principal página de empresa-->	
+<div data-role="page" id="empresa">
+	<div data-role="header" class="pg-header"> 
+	<img src="img/logo/logo.png" class="logop">	
+	<a href="#mypanel" class=" ui-btn-right menu" data-role="button" data-mini="true"><img src="img/iconos/menu.png"></a>
+	<p class="title">La compañia<p>
+	</div>
+	<div role="empresa-page" class="ui-content" id="empresa-c">
+		
+		<p>
+		Somos una empresa Venezolana con alcance internacional, fundada el 21 de Julio del 2009, cuyo objetivo es la fabricación, distribución y comercialización de productos de carbón/grafito (Escobillas, Paletas, Sellos, Bujes, Bocinas, Barras y Placas).
+		</p>
+		<p>
+		Nuestra sinceridad a la hora de establecer un trato comercial nos ha permitido posicionar a nuestra empresa como unas de las de mayor confianza dentro del ramo, destacándonos por poseer un personal calificado y de gran trayectoria en el área, respaldados de un amplio inventario de materias primas para la fabricación de productos de carbón/grafito.
+		</p>
+	</div>
+	<div data-role="footer"></div>
+</div>
 
 
 

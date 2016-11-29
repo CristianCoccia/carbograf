@@ -18,6 +18,7 @@
  */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    font-family: arial;
 }
 
 body {
@@ -159,7 +160,6 @@ ul
 }
 .logop
 {   
-    margin-top: 2em;
     width: 70%;
     height: auto;
 }
@@ -190,11 +190,13 @@ ul
    border-bottom: 10px solid black;
    border-top: 8px solid black;
    border-color: black !important;
+   z-index: 100;
 }
 
 .menu
 {
-   display: inline;
+text-align: right;
+
 }
 
 .opciones
@@ -231,6 +233,7 @@ ul
     text-transform: capitalize;
     margin-top: -2em;
     padding-left: 2em;
+    font-weight: lighter;
 }
 
 .titulo-producto
@@ -240,6 +243,7 @@ ul
     color: red;
     word-wrap: break-word;
     font-size: 0.95em;
+    font-weight: lighter;
 }
 
 .ui-content
@@ -337,4 +341,27 @@ ul
 #mypanel
 {
     background:#E9E9E9;
+    z-index: 102;
+}
+
+#cmap
+{
+    height: 100vh;
+    width: 100%;
+}
+
+#map
+{
+    padding: 0;
+    position : absolute !important; 
+    top : 40px !important;  
+    right : 0; 
+    bottom : 0px !important;  
+    left : 0 !important;    
+}
+
+#empresa-c
+{
+    text-align: center;
+    font-size: 1.3em;
 }
