@@ -11,32 +11,46 @@ var productos = [
 ,
 {
 	id:2,
-	nombre:"Escobillas industriales",
+	nombre:"ESCOBILLAS INDUSTRIALES",
 	imagen:"img/productos/escobillas.png",
-	descripcioncorta:"CARBO & GRAF, C.A. fabrica escobillas de carbón de la máxima calidad, utilizamos una amplia gama de calidades y/o grados ORIGINALES lo cual.",
-	descripcion:"CARBO & GRAF, C.A. fabrica escobillas de carbón de la máxima calidad, utilizamos una amplia gama de calidades y/o grados ORIGINALES lo cual permite que nuestras escobillas de carbón tengan un rendimiento óptimo adaptándose a las necesidades de cada motor."
+	descripcioncorta:"Las escobillas de carbón son hoy en día utilizadas universalmente para generar corriente, uno de sus componentes principales es el grafito natural el cual es un lubricante sólido...",
+	descripcion:"Las escobillas de carbón son hoy en día utilizadas universalmente para generar corriente, uno de sus componentes principales es el grafito natural el cual es un lubricante sólido, permitiendo un desgaste continuo sin dañar ningún componente del motor."
 },
 {	
 	id:3,
-	nombre:"barras de teflón",
-	imagen:"img/productos/teflon.png",
-	descripcioncorta:"Barras de Teflón PTFE 100% virgen, son uno de los polímeros más versátiles, utilizado en una gran cantidad de aplicaciones.",
-	descripcion:""
+	nombre:"ESCOBILLAS DE TRACCCIÓN:",
+	imagen:"img/productos/traccion.png",
+	descripcioncorta:"Estas escobillas comprenden un área que en Venezuela comenzamos tratando en profundidad desde 1907 en el caso de los primeros tranvías eléctricos de caracas y en 1983 en la inauguración del metro de caracas.",
+	descripcion:"Estas escobillas comprenden un área que en Venezuela comenzamos tratando en profundidad desde 1907 en el caso de los primeros tranvías eléctricos de caracas y en 1983 en la inauguración del metro de caracas."
 },
 
 {	
 	id:4,
-	nombre:"barras de teflón",
-	imagen:"img/productos/teflon.png",
-	descripcioncorta:"Barras de Teflón PTFE 100% virgen, son uno de los polímeros más versátiles, utilizado en una gran cantidad de aplicaciones.",
-	descripcion:""
+	nombre:"PANTOGRAFOS DE CARBÓN/GRAFITO:",
+	imagen:"img/productos/pantografo.png",
+	descripcioncorta:"El carbón se utiliza debido a su bajo coeficiente de fricción para la transmisión de corriente entre la catenaria y el pantógrafo.",
+	descripcion:"El carbón se utiliza debido a su bajo coeficiente de fricción para la transmisión de corriente entre la catenaria y el pantógrafo. El efecto autolubricante permite reducir y minimizar las vibraciones de fricción, así como las interrupciones de contacto y la formación de arco eléctrico."
 },
 {
 	id:5,
-	nombre:"Escobillas industriales",
-	imagen:"img/productos/escobillas.png",
-	descripcioncorta:"CARBO & GRAF, C.A. fabrica escobillas de carbón de la máxima calidad, utilizamos una amplia gama de calidades y/o grados ORIGINALES lo cual.",
-	descripcion:"CARBO & GRAF, C.A. fabrica escobillas de carbón de la máxima calidad, utilizamos una amplia gama de calidades y/o grados ORIGINALES lo cual permite que nuestras escobillas de carbón tengan un rendimiento óptimo adaptándose a las necesidades de cada motor."
+	nombre:"ZAPATAS Y PASTILLAS DE GRAFITO PARA FRENOS:",
+	imagen:"img/productos/zapata.png",
+	descripcioncorta:"Las zapatas y/o pastillas de Frenos representan un método moderno, eficaz y fácil de aplicación que sirve para proteger superficies metálicas de difícil acceso y en algunos casos representan el único método aplicable.",
+	descripcion:"Las zapatas y/o pastillas de Frenos representan un método moderno, eficaz y fácil de aplicación que sirve para proteger superficies metálicas de difícil acceso y en algunos casos representan el único método aplicable."
+},
+{
+	id:6,
+	nombre:"SELLOS, BUJES, COJINETES Y BOCINAS DE GRAFITO:",
+	imagen:"img/productos/sellos.png",
+	descripcioncorta:"Los sellos, bocinas y juntas rotativas de grafito, se fabrican sobre medida y plano, o si gusta se surte en buje o barra para su mecanizado.",
+	descripcion:"Los sellos, bocinas y juntas rotativas de grafito, se fabrican sobre medida y plano, o si gusta se surte en buje o barra para su mecanizado. </br> Estas piezas se utilizan junto con sellos mecánicos, siendo una refacción más económica que la original y igual calidad. También se utiliza para fabricar bujes tipo rodamiento en hornos alimenticios de panadería y tortillería, con excelentes resultados y duración."
+},
+{
+	id:7,
+	nombre:"BARRAS, PLACAS Y TUBOS DE GRAFITO.",
+	imagen:"img/productos/barras.png",
+	descripcioncorta:"Las barras, placas y tubos de grafito son desarrollados según la aplicación específica del cliente, como sellos de grafito, chumaceras, cojinetes, casquillos, juntas rotativas, discos para motovariados, rodillos, etc….",
+	descripcion:"Las barras, placas y tubos de grafito son desarrollados según la aplicación específica del cliente, como sellos de grafito, chumaceras, cojinetes, casquillos, juntas rotativas, discos para motovariados, rodillos, etc…."
 }
 
 
