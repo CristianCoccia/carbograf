@@ -143,12 +143,8 @@ return false;
 
 $("document").ready(llenar_home());
 
-$("#ubicanos").live("pageshow",function(){
-$('#map').gmap({ 'center': new google.maps.LatLng(10.174973,-67.973633),
-                    'zoom':17 });   });
+// $("#ubicanos").live("pageshow",function(){
+// $('#map').gmap({ 'center': new google.maps.LatLng(10.174973,-67.973633),
+//                     'zoom':17 });   });
 
 
-$("document").ready(function(){
-
-    $(".btn").css("color","white");
-});
