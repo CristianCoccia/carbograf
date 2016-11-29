@@ -48,3 +48,4 @@ function producto(id)
     $("#descripcion-detalle").html(descripcion);
 
 }
+
