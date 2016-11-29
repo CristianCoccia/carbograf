@@ -4,7 +4,7 @@
   <description>Venta de productos de carbón y gráfito para Carbograf C.A</description>
   <author href="http://sistemasje.com" email="distritohosting@gmail.com">Sistemas JE C.A</author>
   <content src="index.html"/>
-  <access origin="*.google.com" />
+  <access origin="maps.google.com" />
 <access origin="*.googleapis.com" />
 <access origin="*.gstatic.com" />
   <preference name="DisallowOverscroll" value="true"/>
@@ -92,6 +92,7 @@
   <allow-intent href="geo:*"/>
   <platform name="android">
     <allow-intent href="market:*"/>
+    <access origin="maps.google.com" />
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*"/>
