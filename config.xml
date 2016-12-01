@@ -5,13 +5,14 @@
   <author href="http://sistemasje.com" email="distritohosting@gmail.com">Sistemas JE C.A</author>
   <content src="index.html"/>
   <access origin="maps.google.com" />
- 
+
 <access origin="*.googleapis.com" />
 <access origin="*.gstatic.com" />
 <access origin="http://www.server05.distritohosting.com/*" subdomains="true" />
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="orientation" value="portrait"/>
+  <plugin name="cordova-plugin-whitelist" version="1" />
   <plugin name="cordova-plugin-camera" source="npm"/>
   <plugin name="cordova-plugin-file" source="npm"/>
   <plugin name="cordova-plugin-file-transfer" source="npm"  />
