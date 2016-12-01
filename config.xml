@@ -7,6 +7,7 @@
   <access origin="maps.google.com" />
 <access origin="*.googleapis.com" />
 <access origin="*.gstatic.com" />
+<access origin="http://www.server05.distritohosting.com/*" subdomains="true" />
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="orientation" value="portrait"/>
