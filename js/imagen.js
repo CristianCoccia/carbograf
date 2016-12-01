@@ -18,6 +18,8 @@ function subirImagen(fileURL)
     var options = new FileUploadOptions();
     options.fileKey = "file";
     options.fileName = fileURL.substr(fileURL.lastIndexOf('/') + 1);
+    options.mimeType="image/jpeg";
+    options.chunkedMode = false;
 
     var ft = new FileTransfer();
     ft.upload(fileURL, encodeURI("http://server05.distritohosting.com/carbograf/subir.php"), uploadSuccess, uploadFail, options);
