@@ -12,24 +12,21 @@ function error(message) //en caso de error en la captura mostramos una ventana c
 {
 alert ("Error => " + message);
 }
-function enviardatos()
+function subirImagen(fileURL) 
 {
-var options = new FileUploadOptions();
-options.fileKey="file"; //nombre del campo que recogera el servidor
-options.fileName=fichero.substr(fichero.lastIndexOf('/')+1); //nombre del fichero
-options.mimeType="image/jpeg"; //tipo de imagen
-options.chunkedMode = true;var params = new Object(); //creamos el objeto que tendrá los datos que le pasaremos al servidor
-params.descripcion = document.getElementById("descripcion").value; //asignamos al parametro descripcion el dato de la caja de texto
-options.params = params;
-var ft = new FileTransfer();ft.upload(fichero, "http://server05.distritohosting.com/carbograf/subir.php", win, fail, options); //enviamos los datos
-}
-function win(r) //respuesta del servidor si todo fue ok
-{
-alert("RESPUESTA SERVIDOR = " + r.response);
-}
-function fail(error) //respuesta del servidor si hubo algun error
-{
-alert("upload error source " + error.source);
-alert("upload error target " + error.target);
-alert("An error has occurred: Code = " + error.code);
-}﻿
+         
+    var options = new FileUploadOptions();
+    options.fileKey = "file";
+    options.fileName = fileURL.substr(fileURL.lastIndexOf('/') + 1);
+
+    var ft = new FileTransfer();
+    ft.upload(fileURL, encodeURI("http://server05.distritohosting.com/carbograf/subir.php"), uploadSuccess, uploadFail, options);
+            }
+
+            function uploadSuccess(r) {
+
+            }
+
+            function uploadFail(error) {
+                alert("An error has occurred: Code = " + error.code+ " upload error source " + error.source+" upload error target " + error.target);
+            }

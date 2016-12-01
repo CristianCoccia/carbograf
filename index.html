@@ -129,7 +129,7 @@
 			<div class="clearfix"></div>
 				<form id="cotizacion">
 					<h3>COTIZACIÓN:</h3>
-					<h5 data-role="list-divider">Datos de contacto:</h5>
+					<h5>Datos de contacto:</h5>
 					<label for="trazon">Razón Social o Nombre:</label>
 		   			<input type="text" name="trazon" id="trazon">
 		   			<label for="tpersona">Persona Contacto:</label>
@@ -138,47 +138,40 @@
 		   			<input type="email" name="temail" id="temail">
 		   			<label for="tnumero">Número télefonico:</label>
 		   			<input type="text" name="tnumero" id="tnumero">
-		   			<label for="tdepartamento">Departamento:</label>
-		   			<input type="text" name="tdepartamento" id="tdepartamento">
 		   			<h5>CARÁCTERISTICAS DE LA PIEZA DE GRÁFITO:</h5>
-		   			<label for="tvoltaje">Voltaje:</label>
-		   			<input type="text" name="tvoltaje" id="tvoltaje">
-		   			<label for="tamperaje">Amperaje:</label>
-		   			<input type="text" name="tamperaje" id="tamperaje">
-		   			<label for="trpm">R.P.M:</label>
-		   			<input type="text" name="trpm" id="trpm">
-		  			<label for="tpieza">Número de pieza del motor:</label>
-		   			<input type="text" name="tpieza" id="tpieza">
-		   			<label for="tdiametroi">Diámetro interno:</label>
-		   			<input type="number" name="tdiametroi" id="tdiametroi">
-		   			<label for="tdiametroe">Diámetro externo:</label>
-		   			<input type="number" name="tdiametroe" id="tdiametroe">
-		   			<label for="tlongitud">Longitud:</label>
-		   			<input type="number" name="tlongitud" id="tlongitud">
-		   			<label for="tcalidad">Calidad (de tenerla):</label>
-		   			<input type="text" name="tcalidad" id="tcalidad">	
-		   			<label for="tlargo">Largo del cable:</label>
-		   			<input type="number" name="tlargo" id="tlargo">
-		   			<label for="tsalida">Salida del cable:</label>
-		   			<input type="number" name="tsalida" id="tsalida">
-		   			<label for="tdiametrocable">Diámetro del cable:</label>
-		   			<input type="number" name="tdiametrocable" id="tdiametrocable">
-		   			<label for="tncable">Número de cables:</label>
-		   			<input type="number" name="tncable" id="tncable">
-		   			<label for="tterminal">Tipo de términal:</label>
-		   			<input type="text" name="tterminal" id="tterminal">
-		   			<label for="tubicacion">Ubicación y servicio:</label>
-		   			<input type="text" name="tubicacion" id="tubicacion">
-		   			<label for="tfrecuencia">Frecuencia de uso:</label>
-		   			<input type="text" name="tfrecuencia" id="tfrecuencia">
-		   			<label for="tcondiciones">Condiciones ámbientales:</label>
-		   			<input type="text" name="tcondiciones" id="tcondiciones">
+			   		<label for="caract">Seleccione una caracteristica:</label>	
+			   			<select data-rel="popup" id="caract" name="crt">
+				   			<option value="tvoltaje">Voltaje</option>
+				   			<option value="tamperaje">Amperaje</option>
+				   			<option value="trpm">R.P.M</option>
+				  			<option value="tpieza">Número de pieza del motor</option>
+				   			<option value="tespesor">Espesor</option>
+				   			<option value="tancho">Ancho</option>
+				   			<option value="tlargo">Largo</option>
+				   			<option value="tdiametroi">Diámetro interno</option>
+				   			<option value="tdiametroe">Diametro externo</option>
+				   			<option value="tlongitud">Longitud</option>
+			   			</select>
+		   			<input type="text" name="opcion" id="opc-caract"/>
+		   			<input type="button" name="" value="agregar caracteristica" onClick="agregarcrt();"/>
+		   			<div class="carateristicas">
+				   			<div id="tvoltaje"></div>
+				   			<div id="tamperaje"></div>
+				   			<div id="trpm"></div>
+				  			<div id="tpieza"></div>
+				   			<div id="tespesor"></div>
+				   			<div id="tancho"></div>
+				   			<div id="tlargo"></div>
+				   			<div id="tdiametroi"></div>
+				   			<div id="tdiametroe"></div>
+				   			<div id="tlongitud"></div>
+		   			</div>
 		   			<label for="tobservaciones">Observaciones:</label>
 		   			<textarea id="tobservaciones" name="tobservaciones"></textarea>
 		   			<h5>Dibujo del gráfito:</h5>
 		   			<img id="img-grafito" src="img/iconos/agregar.png"> 			
 					<input type="button" class="btn" name="foto" onClick="obtenerfoto();" value="Tomar foto del gráfito.">
-					<input type="button" class="btn" name="foto" onClick="" value="Enviar cotización.">
+					<input type="button" class="btn" name="foto" onClick="enviarcot();" value="Enviar cotización.">
 			
 			</div>
 		</div>

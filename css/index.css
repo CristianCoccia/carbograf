@@ -143,6 +143,11 @@ ul
     margin: 0;
 }
 
+option
+{
+    color:black;
+    text-transform: uppercase;
+}
 
 .caja-producto
 {
@@ -153,6 +158,20 @@ ul
    
     
 }
+
+.carateristicas
+{
+    padding: 0.5em;
+    font-weight: bold;
+    background: #FFFFFF;
+    margin:0.5em;
+}
+
+.caracteristicas>div
+{
+    border: gray inset 1px;
+}
+
 .direccion
 {
     font-weight: bold;
@@ -166,7 +185,7 @@ ul
 
 .divider
 {
-        color: red;
+    color: red;
     font-weight: bolder;
     text-align: center;
     border-bottom: 0.2em inset gray ;

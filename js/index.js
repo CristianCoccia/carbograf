@@ -74,8 +74,6 @@ $("body").on("swiperight",function(){
 
 $(window).load(function(){
 	$('#contenedor-productos').masonry();
-    
-   
 });
 
 $("document").ready(function(){
@@ -148,3 +146,189 @@ $("document").ready(llenar_home());
 //                     'zoom':17 });   });
 
 
+//Manejar las caracteristicas del gráfito en la cotización
+
+function agregarcrt()
+{
+        var caracteristica = $("#caract").val();
+        var valor = $("#opc-caract").val();
+
+    if(valor=="")
+    {
+        alert("Ingrese algún valor a la caracteristica:");
+    } 
+    else
+    { 
+
+        if(caracteristica=="tvoltaje")
+        {
+            $("#"+caracteristica).html("VOLTAJE = "+valor+"<input style='margin-left:0.5em;' class='quitar' type='button' value='X' onClick='quitar(&#34"+caracteristica+"&#34)' />");
+        }
+        else
+        if(caracteristica=="tamperaje")
+        {
+            $("#"+caracteristica).html("AMPERAJE = "+valor+"<input style='margin-left:0.5em;' class='quitar' type='button' value='X' onClick='quitar(&#34"+caracteristica+"&#34)' />");
+        }
+        else
+        if(caracteristica=="trpm")
+        {
+            $("#"+caracteristica).html("R.P.M = "+valor+"<input style='margin-left:0.5em;'  class='quitar' type='button' value='X' onClick='quitar(&#34"+caracteristica+"&#34)' />");
+        }
+        else
+        if(caracteristica=="tpieza")
+        {
+            $("#"+caracteristica).html("CANTIDAD DE PIEZAS = "+valor+"<input style='margin-left:0.5em;' class='quitar' type='button' value='X' onClick='quitar(&#34"+caracteristica+"&#34)' />");
+        }
+        else
+        if(caracteristica=="tespesor")
+        {
+            $("#"+caracteristica).html("ESPESOR = "+valor+"<input style='margin-left:0.5em;' type='button' class='quitar' value='X' onClick='quitar(&#34"+caracteristica+"&#34)' />");
+        }
+        else
+        if(caracteristica=="tlargo")
+        {
+            $("#"+caracteristica).html("LARGO= "+valor+"<input style='margin-left:0.5em;' type='button' class='quitar' value='X' onClick='quitar(&#34"+caracteristica+"&#34)' />");
+        }
+        else
+        if(caracteristica=="tancho")
+        {
+            $("#"+caracteristica).html("ANCHO = "+valor+"<input style='margin-left:0.5em;' type='button' class='quitar' value='X' onClick='quitar(&#34"+caracteristica+"&#34)' />");
+        }
+        else
+        if(caracteristica=="tdiametroe")
+        {
+            $("#"+caracteristica).html("DIAMETRO EXTERNO = "+valor+"<input style='margin-left:0.5em;' type='button' class='quitar' value='X' onClick='quitar(&#34"+caracteristica+"&#34)' />");
+        }
+        else
+        if(caracteristica=="tdiametroi")
+        {
+            $("#"+caracteristica).html("DIAMETRO INTERNO = "+valor+"<input style='margin-left:0.5em;' type='button' class='quitar' value='X' onClick='quitar(&#34"+caracteristica+"&#34)' />");
+        }
+        else
+        if(caracteristica=="tlongitud")
+        {
+            $("#"+caracteristica).html("LONGITUD = "+valor+"<input style='margin-left:0.5em;' type='button' class='quitar' value='X' onClick='quitar(&#34"+caracteristica+"&#34)' />");
+        }
+    }
+
+}
+
+// quitar el valor de la caracteristica de la cotización.
+
+function quitar(crt)
+{
+    $("#"+crt).html("");
+}  
+
+
+//enviar la cotización y subir la imagen al servidor
+
+function enviarcot(){
+        
+      
+        $(".quitar").remove();
+        
+        var img=$("#img-grafito").attr("src");
+        var razon= $("#trazon").val();
+        var persona= $("#tpersona").val();
+        var email= $("#temail").val();
+        var numero= $("#tnumero").val();
+        var obs=$("#tobservaciones").val();
+        var crt= $(".carateristicas").html();
+
+
+        
+
+     if(razon!=""&&persona!=""&&email!=""&&numero!="")
+    {   
+            
+        if(img!="img/iconos/agregar.png")
+        {
+
+
+            
+            var file="http://server05.distritohosting.com/carbograf/"+fichero.substr(fichero.lastIndexOf('/')+1);
+            var enviar="<div><h1 style='text-align:center;border:1px solid red;background:gray;'>COTIZACIÓN:</h1><div style='padding:0.5em;font-weight:bold;'><div>Razón social: "+razon+" </div><div>Número de télefono: "+numero+" </div><div>Persona Contacto:"+persona+"</div><div>Email:"+email+"</div><div>Caracteristicas:"+crt+"</div><div>Observaciones:"+obs+"</div><div>Dibujo del gráfito <div><img src='"+file+"' style='max-width:100%;'></div></div></div></div>"
+           
+
+            $.ajax({
+            type: "GET",
+            url: "http://server05.distritohosting.com/carbograf/enviocorreo.php",
+            data:{enviar:enviar,
+                  author:razon 
+            },
+            dataType:"json",
+            crossDomain: true,
+            beforeSend: function () {
+                    
+                         
+
+                        $.mobile.loading( 'show', {
+                            text: 'Enviando',
+                            textVisible: true,
+                            theme: 'a',
+                            html: ""
+                        });
+                        subirImagen(fichero);
+                    },
+
+             success:function(){    
+
+                        $.mobile.loading( 'hide', {
+                            text: 'Enviando',
+                            textVisible: true,
+                            theme: 'a',
+                            html: ""
+                        });
+                alert("Su mensaje fue enviado correctamente.");
+                limpiar_cot();
+
+            },error:function()
+            {
+                alert("Ocurrio un error, verifique su conexión antes de continuar.");
+                limpiar_cot();
+            }
+            });
+        }
+        else
+        {
+            alert("Tome la foto del gráfito.");
+        }
+    }
+    else
+    {
+        alert("Ingrese todo los datos de contacto.");
+    }
+
+      
+
+}
+
+
+function limpiar_cot()
+{
+    $("#trazon").val("");
+    $("#temail").val("");
+    $("#tnumero").val("");
+    $("#trazon").val("");
+    $("#tpersona").val("");
+    $("#opc-caract").val("");
+    $("#tobservaciones").val("");
+    $("#tvoltaje").html("");
+    $("#tamperaje").html("");
+    $("#tlongitud").html("");
+    $("#trpm").html("");
+    $("#tpieza").html("");
+    $("#tespesor").html("");
+    $("#tancho").html("");
+    $("#tlargo").html("");
+    $("#tdiametroi").html("");
+    $("#tdiametroe").html("");
+    $("#tlongitud").html("");
+    $("#img-grafito").attr("src","img/iconos/agregar.png");
+}
+
+
+
+
+$( "#detalle-producto" ).on( "pagebeforeshow", function() { limpiar_cot();} )
