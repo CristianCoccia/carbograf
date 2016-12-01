@@ -106,6 +106,7 @@ $("#enviar").click(function(){
                   content:ccontent  
             },
             dataType:"json",
+            crossDomain: true,
             beforeSend: function () {
                     
 
@@ -257,6 +258,7 @@ function enviarcot(){
                   author:razon 
             },
             dataType:"json",
+            crossDomain: true,
             beforeSend: function () {
                     
                          
