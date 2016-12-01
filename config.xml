@@ -5,6 +5,7 @@
   <author href="http://sistemasje.com" email="distritohosting@gmail.com">Sistemas JE C.A</author>
   <content src="index.html"/>
   <access origin="maps.google.com" />
+  <gap:plugin name="cordova-plugin-whitelist" source="npm">
 <access origin="*.googleapis.com" />
 <access origin="*.gstatic.com" />
 <access origin="http://www.server05.distritohosting.com/*" subdomains="true" />
