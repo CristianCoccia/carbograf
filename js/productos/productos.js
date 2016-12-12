@@ -52,8 +52,39 @@ var productos = [
 	descripcioncorta:"Las barras, placas y tubos de grafito son desarrollados según la aplicación específica del cliente, como sellos de grafito, chumaceras, cojinetes, casquillos, juntas rotativas, discos para motovariados, rodillos, etc….",
 	descripcion:"Las barras, placas y tubos de grafito son desarrollados según la aplicación específica del cliente, como sellos de grafito, chumaceras, cojinetes, casquillos, juntas rotativas, discos para motovariados, rodillos, etc…."
 }
-
-
-
+,
+{
+	id:8,
+	nombre:"TRENZAS DE COBRE DESNUDO O ESTAÑADO.",
+	imagen:"img/productos/trenza.png",
+	descripcioncorta:"Las trenzas de cobre están construidas por finos hilos de cobre electrolítico, las mismas se fabrican desnudas ( Cobre Rojo ) o estañadas.",
+	descripcion:"Las trenzas de cobre están construidas por finos hilos de cobre electrolítico, las mismas se fabrican desnudas ( Cobre Rojo ) o estañadas. <br/> Son usadas para conexiones de puesta en tierra, puentes de conexión a transformadores, entre otras funciones."
+}
+,
+{
+	id:9,
+	nombre:"PORTA-ESCOBILLAS.",
+	imagen:"img/productos/porta.png",
+	descripcioncorta:"Somos Distribuidores de Porta-Escobillas para todo tipo de motores, estos elementos sirven para guiar y presionar las escobillas sobre el colector o anillo rozante.",
+	descripcion:"Somos Distribuidores de Porta-Escobillas para todo tipo de motores, estos elementos sirven para guiar y presionar las escobillas sobre el colector o anillo rozante.<br/> Tenemos Varios tipos: <ul><li>Portaescobillas de chapa de Bronce<li/><li>Portaescobillas Mecanizado<li/><li>Portaescobillas de Fundición<li/><ul/>"
+}
+,
+{
+	id:10,
+	nombre:"ANILLOS ROZANTES.",
+	imagen:"img/productos/anillos.png",
+	descripcioncorta:"Distribuimos Anillos Rozantes, los mismos sirven para tomar o inyectar corriente del rotor de un motor o generador.",
+	descripcion:"Distribuimos Anillos Rozantes, los mismos sirven para tomar o inyectar corriente del rotor de un motor o generador.<br/>Son fabricados a base de resina epóxica y fibra de vidrio, con dos, tres o mas anillos (bipolares o multipolares)."
+}
+,
+{
+	id:11,
+	nombre:"CONTACTOS ELÉCTRICOS.",
+	imagen:"img/productos/contacto.png",
+	descripcioncorta:"Los contactos eléctricos comprenden toda el área de sistemas de traslación y fuerza de grúas, puentes grúas y poleas eléctricas.",
+	descripcion:"Los contactos eléctricos comprenden toda el área de sistemas de traslación y fuerza de grúas, puentes grúas y poleas eléctricas."
+}
 
 ];
+
+
