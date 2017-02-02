@@ -22,16 +22,16 @@
   <plugin name="cordova-plugin-file-transfer" source="npm"  />
   <icon src="icon.png"/>
   <platform name="android">
-    <icon src="www/icon.png">
+    <icon src="www/icon.png"/>
   </platform>
   <platform name="ios">
- 	<icon src="www/icon.png">
+ 	<icon src="www/icon.png"/>
   </platform>
   <platform name="wp8">
-		<icon src="www/icon.png">
+		<icon src="www/icon.png"/>
   </platform>
   <platform name="windows">
- 	<icon src="www/icon.png">   
+ 	<icon src="www/icon.png"/>   
   </platform>
   <plugin name="cordova-plugin-camera" source="npm"  />
     <access origin="*"/>
